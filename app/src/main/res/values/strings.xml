@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EchoTasks</string>
+    <string name="welcome_to_echotasks">Welcome to EchoTasks</string>
+</resources>

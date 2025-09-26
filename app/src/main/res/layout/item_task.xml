@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:padding="12dp"
+    android:id="@+id/cardRoot">
+
+    <!-- FrameLayout  -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Main vertical content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <!-- First Row: Checkbox + Title + Edit + Delete Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/cbDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Task Title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+
+                <ImageButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Edit Task"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginEnd="1dp"
+                    app:tint="@color/dark_blue" />
+
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/trash"
+                    android:layout_marginRight="3dp"
+                    app:tint="@color/dark_red"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:text="Task description here"
+                android:textSize="14sp"
+                android:paddingLeft="27px"
+                android:textColor="@android:color/darker_gray"/>
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingLeft="27px"
+                android:text="08:30 AM, 7 Aug 2025"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </LinearLayout>
+
+        <!-- Color Picker Row at bottom-right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/circleRed"
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle_red"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/circleWhite"
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle_white"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/circleBlue"
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle_blue"
+                android:layout_marginEnd="10dp" />
+
+            <ImageView
+                android:id="@+id/circleGreen"
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle_green" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>
